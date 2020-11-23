@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MemoramaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="JugadorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contrasenia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PuntuacionSet" Relationship="Self.FK_JugadorPuntuacion" FromRole="JugadorSet" ToRole="PuntuacionSet" />
+  </EntityType>
+  <EntityType Name="PuntuacionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Puntos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Jugador_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JugadorSet" Relationship="Self.FK_JugadorPuntuacion" FromRole="PuntuacionSet" ToRole="JugadorSet" />
+  </EntityType>
+  <Association Name="FK_JugadorPuntuacion">
+    <End Role="JugadorSet" Type="Self.JugadorSet" Multiplicity="1" />
+    <End Role="PuntuacionSet" Type="Self.PuntuacionSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JugadorSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PuntuacionSet">
+        <PropertyRef Name="Jugador_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MemoramaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="JugadorSet" EntityType="Self.JugadorSet" />
+    <EntitySet Name="PuntuacionSet" EntityType="Self.PuntuacionSet" />
+    <AssociationSet Name="FK_JugadorPuntuacion" Association="Self.FK_JugadorPuntuacion">
+      <End Role="JugadorSet" EntitySet="JugadorSet" />
+      <End Role="PuntuacionSet" EntitySet="PuntuacionSet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
