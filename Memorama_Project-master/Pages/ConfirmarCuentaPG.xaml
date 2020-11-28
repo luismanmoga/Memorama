@@ -1,0 +1,23 @@
+﻿<Page x:Class="Memorama.Pages.ConfirmarCuentaPG"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Memorama.Pages"
+      xmlns:p = "clr-namespace:Memorama.Languages"
+      mc:Ignorable="d" 
+      d:DesignHeight="380" d:DesignWidth="500"
+      Title="ConfirmarCuentaPG">
+    <Page.Background>
+        <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
+    </Page.Background>
+
+    <Grid>
+        <Rectangle Fill="#FF517EB0" HorizontalAlignment="Left" Height="55" Margin="80,30,0,0" VerticalAlignment="Top" Width="355" RadiusX="25" RadiusY="50"/>
+        <Label Content="Validar Cuenta" HorizontalAlignment="Left" Margin="180,42,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="20"/>
+        <TextBox Name = "txtCodigo" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCodigo}" HorizontalAlignment="Left" Height="35" Margin="120,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" FontSize="15" Foreground="White" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+        
+    </Grid>
+</Page>

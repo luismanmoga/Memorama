@@ -80,8 +80,9 @@ namespace Memorama.Windows {
                 this.ShowMessageAsync("Alerta", "Campos vacios");
             }*/
 
-            Correo correo = new Correo();
-            correo.Enviar(txtCorreo.Text);
+            Logic logic = new Logic();
+            String res = logic.sendMail(txtCorreo.Text,"Código de confirmación" );
+            this.ShowMessageAsync("Alerta", res);
         }
     }
 }

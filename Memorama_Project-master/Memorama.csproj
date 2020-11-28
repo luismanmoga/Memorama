@@ -115,6 +115,10 @@
     </Compile>
     <Compile Include="Model\Correo.cs" />
     <Compile Include="Model\Jugador.cs" />
+    <Compile Include="Model\Logic.cs" />
+    <Compile Include="Pages\ConfirmarCuentaPG.xaml.cs">
+      <DependentUpon>ConfirmarCuentaPG.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RecuperarPassPg.xaml.cs">
       <DependentUpon>RecuperarPassPg.xaml</DependentUpon>
     </Compile>
@@ -144,6 +148,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ConfirmarCuentaPG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RecuperarPassPg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

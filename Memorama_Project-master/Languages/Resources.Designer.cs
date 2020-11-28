@@ -151,6 +151,15 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Código.
+        /// </summary>
+        public static string txtCodigo {
+            get {
+                return ResourceManager.GetString("txtCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string txtCorreo {

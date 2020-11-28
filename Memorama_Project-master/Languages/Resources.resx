@@ -147,6 +147,9 @@
   <data name="txbTitulo" xml:space="preserve">
     <value>REGISTRO DE JUGADOR</value>
   </data>
+  <data name="txtCodigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
   <data name="txtCorreo" xml:space="preserve">
     <value>Correo</value>
   </data>
