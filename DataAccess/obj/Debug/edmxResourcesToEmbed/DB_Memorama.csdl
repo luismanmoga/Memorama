@@ -9,6 +9,7 @@
     <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Contrasenia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="PuntuacionSet" Relationship="Self.FK_JugadorPuntuacion" FromRole="JugadorSet" ToRole="PuntuacionSet" />
+    <Property Name="Estado" Type="String" Nullable="false" />
   </EntityType>
   <EntityType Name="PuntuacionSet">
     <Key>

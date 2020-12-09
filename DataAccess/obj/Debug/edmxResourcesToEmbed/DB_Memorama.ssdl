@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="MemoramaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="MemoramaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MemoramaModelStoreContainer">
+    <EntitySet Name="JugadorSet" EntityType="MemoramaModel.Store.JugadorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PuntuacionSet" EntityType="MemoramaModel.Store.PuntuacionSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_JugadorPuntuacion" Association="MemoramaModel.Store.FK_JugadorPuntuacion">
+      <End Role="JugadorSet" EntitySet="JugadorSet" />
+      <End Role="PuntuacionSet" EntitySet="PuntuacionSet" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="JugadorSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Username" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Correo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Correo" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Contrasenia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="PuntuacionSet">
     <Key>
@@ -19,8 +28,8 @@
     <Property Name="Jugador_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_JugadorPuntuacion">
-    <End Role="JugadorSet" Type="Self.JugadorSet" Multiplicity="1" />
-    <End Role="PuntuacionSet" Type="Self.PuntuacionSet" Multiplicity="*" />
+    <End Role="JugadorSet" Type="MemoramaModel.Store.JugadorSet" Multiplicity="1" />
+    <End Role="PuntuacionSet" Type="MemoramaModel.Store.PuntuacionSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="JugadorSet">
         <PropertyRef Name="Id" />
@@ -30,12 +39,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="MemoramaModelStoreContainer">
-    <EntitySet Name="JugadorSet" EntityType="Self.JugadorSet" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="PuntuacionSet" EntityType="Self.PuntuacionSet" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_JugadorPuntuacion" Association="Self.FK_JugadorPuntuacion">
-      <End Role="JugadorSet" EntitySet="JugadorSet" />
-      <End Role="PuntuacionSet" EntitySet="PuntuacionSet" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

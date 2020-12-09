@@ -7,21 +7,12 @@
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        xmlns:p = "clr-namespace:Memorama.Languages"
-        Title="Iniciar Sesión" Height="380" Width="500">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
-        </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="100" Margin="168,55,0,0" VerticalAlignment="Top" Width="140" Source="/Memorama;component/Resources/Memorama.png" Stretch="Fill">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg" Stretch="UniformToFill"/>
-            </Image.OpacityMask>
-        </Image>
-        <TextBox x:Name="txtCorreo" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtUsuario}" HorizontalAlignment="Left" Height="28" Margin="158,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Foreground="White" FontFamily="Showcard Gothic" BorderBrush="Black"/>
-        <PasswordBox x:Name="txtContrasenia" materialDesign:HintAssist.Hint="{x:Static p:Resources.pswContrasenia}" HorizontalAlignment="Left" Margin="158,230,0,0" VerticalAlignment="Top" Width="190" FontFamily="Showcard Gothic" BorderBrush="Black" Foreground="White"/>
-        <Button x:Name="btnIniciarSesion" Click="BtnIniciarSesion_Click" Content="{x:Static p:Resources.btnIniciarSesion}"  HorizontalAlignment="Left" Margin="158,268,0,0" VerticalAlignment="Top" Width="190" FontSize="10" FontFamily="Showcard Gothic" Background="#FF3A8FB7" BorderBrush="{x:Null}"/>
-        <Button  Content="{x:Static p:Resources.lblRegistrarse}" HorizontalAlignment="Left" Margin="158,305,0,0" VerticalAlignment="Top" Width="190" Click="BtnRegistrarse_Click" Background="#FF2C2C2A"/>
+        WindowStartupLocation="CenterScreen" 
+        xmlns:p = "clr-namespace:Memorama.Languages"       
+        Title="Iniciar Sesión" Height="380" Width="500"       
+        >
+    <Grid >
+        <Frame x:Name="framePrincipal" Content="" HorizontalAlignment="Left" Height="349" VerticalAlignment="Top" Width="492" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </mah:MetroWindow>

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6dd20fed302f4f9bbac2b7d11fee4f09" Name="Diagram1">
+      <Diagram DiagramId="6dd20fed302f4f9bbac2b7d11fee4f09" Name="Diagram1" ZoomLevel="131">
         <EntityTypeShape EntityType="MemoramaModel.JugadorSet" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MemoramaModel.PuntuacionSet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="MemoramaModel.FK_JugadorPuntuacion" ManuallyRouted="false" />

@@ -92,6 +92,7 @@
       <LastGenOutput>DB_Memorama.Context.cs</LastGenOutput>
       <DependentUpon>DB_Memorama.edmx</DependentUpon>
     </Content>
+    <Content Include="DB_Memorama.edmx.sql" />
     <Content Include="DB_Memorama.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DB_Memorama.edmx</DependentUpon>

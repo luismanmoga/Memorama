@@ -6,8 +6,5 @@
         xmlns:local="clr-namespace:Memorama"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Name="btnRegistro" Click="btnRegistro_Click" Content="Registro" HorizontalAlignment="Left" Height="30" Margin="348,310,0,0" VerticalAlignment="Top" Width="117"/>
-
-    </Grid>
+    <Grid/>
 </Window>

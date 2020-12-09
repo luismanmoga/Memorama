@@ -61,6 +61,15 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Confirmar.
+        /// </summary>
+        public static string btnConfirmar {
+            get {
+                return ResourceManager.GetString("btnConfirmar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Registrarte.
         /// </summary>
         public static string btnEndRegister {

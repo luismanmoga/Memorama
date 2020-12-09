@@ -15,24 +15,18 @@ namespace Memorama.DataAccessService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JugadorSet", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Jugador", Namespace="http://schemas.datacontract.org/2004/07/MemoramaService.Model")]
     [System.SerializableAttribute()]
-    public partial class JugadorSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Jugador : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContraseniaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CorreoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Memorama.DataAccessService.PuntuacionSet[] PuntuacionSetField;
+        private string EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UsernameField;
@@ -44,19 +38,6 @@ namespace Memorama.DataAccessService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Contrasenia {
-            get {
-                return this.ContraseniaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContraseniaField, value) != true)) {
-                    this.ContraseniaField = value;
-                    this.RaisePropertyChanged("Contrasenia");
-                }
             }
         }
         
@@ -74,27 +55,14 @@ namespace Memorama.DataAccessService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public string Estado {
             get {
-                return this.IdField;
+                return this.EstadoField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Memorama.DataAccessService.PuntuacionSet[] PuntuacionSet {
-            get {
-                return this.PuntuacionSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PuntuacionSetField, value) != true)) {
-                    this.PuntuacionSetField = value;
-                    this.RaisePropertyChanged("PuntuacionSet");
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
                 }
             }
         }
@@ -122,136 +90,33 @@ namespace Memorama.DataAccessService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PuntuacionSet", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class PuntuacionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Memorama.DataAccessService.JugadorSet JugadorSetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Jugador_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PuntosField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Fecha {
-            get {
-                return this.FechaField;
-            }
-            set {
-                if ((this.FechaField.Equals(value) != true)) {
-                    this.FechaField = value;
-                    this.RaisePropertyChanged("Fecha");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Memorama.DataAccessService.JugadorSet JugadorSet {
-            get {
-                return this.JugadorSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JugadorSetField, value) != true)) {
-                    this.JugadorSetField = value;
-                    this.RaisePropertyChanged("JugadorSet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Jugador_Id {
-            get {
-                return this.Jugador_IdField;
-            }
-            set {
-                if ((this.Jugador_IdField.Equals(value) != true)) {
-                    this.Jugador_IdField = value;
-                    this.RaisePropertyChanged("Jugador_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Puntos {
-            get {
-                return this.PuntosField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PuntosField, value) != true)) {
-                    this.PuntosField = value;
-                    this.RaisePropertyChanged("Puntos");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataAccessService.IDataAccessService")]
     public interface IDataAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/RegistrarJugador", ReplyAction="http://tempuri.org/IDataAccessService/RegistrarJugadorResponse")]
-        int RegistrarJugador(string usr, string correo, string pass);
+        int RegistrarJugador(string usuario, string correo, string contrasenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/RegistrarJugador", ReplyAction="http://tempuri.org/IDataAccessService/RegistrarJugadorResponse")]
-        System.Threading.Tasks.Task<int> RegistrarJugadorAsync(string usr, string correo, string pass);
+        System.Threading.Tasks.Task<int> RegistrarJugadorAsync(string usuario, string correo, string contrasenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetJugador", ReplyAction="http://tempuri.org/IDataAccessService/GetJugadorResponse")]
-        Memorama.DataAccessService.JugadorSet GetJugador();
+        Memorama.DataAccessService.Jugador GetJugador(string correo, string contrsenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetJugador", ReplyAction="http://tempuri.org/IDataAccessService/GetJugadorResponse")]
-        System.Threading.Tasks.Task<Memorama.DataAccessService.JugadorSet> GetJugadorAsync();
+        System.Threading.Tasks.Task<Memorama.DataAccessService.Jugador> GetJugadorAsync(string correo, string contrsenia);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/autenticar", ReplyAction="http://tempuri.org/IDataAccessService/autenticarResponse")]
-        bool autenticar(string correo, string contrasenia);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Autenticar", ReplyAction="http://tempuri.org/IDataAccessService/AutenticarResponse")]
+        bool Autenticar(string correo, string contrasenia);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/autenticar", ReplyAction="http://tempuri.org/IDataAccessService/autenticarResponse")]
-        System.Threading.Tasks.Task<bool> autenticarAsync(string correo, string contrasenia);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Autenticar", ReplyAction="http://tempuri.org/IDataAccessService/AutenticarResponse")]
+        System.Threading.Tasks.Task<bool> AutenticarAsync(string correo, string contrasenia);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Existe", ReplyAction="http://tempuri.org/IDataAccessService/ExisteResponse")]
+        bool Existe(string username, string correo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Existe", ReplyAction="http://tempuri.org/IDataAccessService/ExisteResponse")]
+        System.Threading.Tasks.Task<bool> ExisteAsync(string username, string correo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -281,28 +146,36 @@ namespace Memorama.DataAccessService {
                 base(binding, remoteAddress) {
         }
         
-        public int RegistrarJugador(string usr, string correo, string pass) {
-            return base.Channel.RegistrarJugador(usr, correo, pass);
+        public int RegistrarJugador(string usuario, string correo, string contrasenia) {
+            return base.Channel.RegistrarJugador(usuario, correo, contrasenia);
         }
         
-        public System.Threading.Tasks.Task<int> RegistrarJugadorAsync(string usr, string correo, string pass) {
-            return base.Channel.RegistrarJugadorAsync(usr, correo, pass);
+        public System.Threading.Tasks.Task<int> RegistrarJugadorAsync(string usuario, string correo, string contrasenia) {
+            return base.Channel.RegistrarJugadorAsync(usuario, correo, contrasenia);
         }
         
-        public Memorama.DataAccessService.JugadorSet GetJugador() {
-            return base.Channel.GetJugador();
+        public Memorama.DataAccessService.Jugador GetJugador(string correo, string contrsenia) {
+            return base.Channel.GetJugador(correo, contrsenia);
         }
         
-        public System.Threading.Tasks.Task<Memorama.DataAccessService.JugadorSet> GetJugadorAsync() {
-            return base.Channel.GetJugadorAsync();
+        public System.Threading.Tasks.Task<Memorama.DataAccessService.Jugador> GetJugadorAsync(string correo, string contrsenia) {
+            return base.Channel.GetJugadorAsync(correo, contrsenia);
         }
         
-        public bool autenticar(string correo, string contrasenia) {
-            return base.Channel.autenticar(correo, contrasenia);
+        public bool Autenticar(string correo, string contrasenia) {
+            return base.Channel.Autenticar(correo, contrasenia);
         }
         
-        public System.Threading.Tasks.Task<bool> autenticarAsync(string correo, string contrasenia) {
-            return base.Channel.autenticarAsync(correo, contrasenia);
+        public System.Threading.Tasks.Task<bool> AutenticarAsync(string correo, string contrasenia) {
+            return base.Channel.AutenticarAsync(correo, contrasenia);
+        }
+        
+        public bool Existe(string username, string correo) {
+            return base.Channel.Existe(username, correo);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ExisteAsync(string username, string correo) {
+            return base.Channel.ExisteAsync(username, correo);
         }
     }
 }

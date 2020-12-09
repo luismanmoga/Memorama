@@ -33,7 +33,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MemoramaService.Model" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IDataAccessService_RegistrarJugador_InputMessage">
@@ -48,11 +48,17 @@
   <wsdl:message name="IDataAccessService_GetJugador_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetJugadorResponse" />
   </wsdl:message>
-  <wsdl:message name="IDataAccessService_autenticar_InputMessage">
-    <wsdl:part name="parameters" element="tns:autenticar" />
+  <wsdl:message name="IDataAccessService_Autenticar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autenticar" />
   </wsdl:message>
-  <wsdl:message name="IDataAccessService_autenticar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:autenticarResponse" />
+  <wsdl:message name="IDataAccessService_Autenticar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataAccessService_Existe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Existe" />
+  </wsdl:message>
+  <wsdl:message name="IDataAccessService_Existe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteResponse" />
   </wsdl:message>
   <wsdl:portType name="IDataAccessService">
     <wsdl:operation name="RegistrarJugador">
@@ -63,9 +69,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/GetJugador" message="tns:IDataAccessService_GetJugador_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/GetJugadorResponse" message="tns:IDataAccessService_GetJugador_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="autenticar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/autenticar" message="tns:IDataAccessService_autenticar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/autenticarResponse" message="tns:IDataAccessService_autenticar_OutputMessage" />
+    <wsdl:operation name="Autenticar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/Autenticar" message="tns:IDataAccessService_Autenticar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/AutenticarResponse" message="tns:IDataAccessService_Autenticar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/Existe" message="tns:IDataAccessService_Existe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/ExisteResponse" message="tns:IDataAccessService_Existe_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IDataAccessService" type="tns:IDataAccessService">
@@ -89,8 +99,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="autenticar">
-      <soap12:operation soapAction="http://tempuri.org/IDataAccessService/autenticar" style="document" />
+    <wsdl:operation name="Autenticar">
+      <soap12:operation soapAction="http://tempuri.org/IDataAccessService/Autenticar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <soap12:operation soapAction="http://tempuri.org/IDataAccessService/Existe" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

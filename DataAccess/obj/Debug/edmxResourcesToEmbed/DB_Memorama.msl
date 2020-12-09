@@ -2,17 +2,18 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MemoramaModelStoreContainer" CdmEntityContainer="MemoramaEntities">
     <EntitySetMapping Name="JugadorSet">
-      <EntityTypeMapping TypeName="MemoramaModel.JugadorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MemoramaModel.JugadorSet)">
         <MappingFragment StoreEntitySet="JugadorSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PuntuacionSet">
-      <EntityTypeMapping TypeName="MemoramaModel.PuntuacionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MemoramaModel.PuntuacionSet)">
         <MappingFragment StoreEntitySet="PuntuacionSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Puntos" ColumnName="Puntos" />

@@ -1,31 +1,30 @@
-﻿
-using MahApps.Metro.Controls;
-using MahApps.Metro.Controls.Dialogs;
-using Memorama.DataAccessService;
+﻿using Memorama.DataAccessService;
+using Memorama.Model;
+using Memorama.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Memorama.Windows {
+namespace Memorama.Pages {
     /// <summary>
-    /// Lógica de interacción para RegistroWin.xaml
+    /// Lógica de interacción para RegistroUsuarioPG.xaml
     /// </summary>
-    public partial class RegistroWin : MetroWindow {
-
-        public RegistroWin() {
+    public partial class RegistroUsuarioPG : Page {
+        public RegistroUsuarioPG() {
             InitializeComponent();
-        } 
+        }
 
         /*
          * 
@@ -47,7 +46,7 @@ namespace Memorama.Windows {
          *
          */
         private void btnInfoUsuario_MouseEnter(object sender, MouseEventArgs e) {
-            
+
             if (isEnglish()) {
                 lblInfo.Text = "Username max lenght 16 characters";
             } else {
@@ -78,7 +77,7 @@ namespace Memorama.Windows {
          */
 
         private void btnRegresar_Click(object sender, RoutedEventArgs e) {
-            this.Close();
+            this.NavigationService.Navigate(new IniciarSesionPG());
         }
 
         private void btnRegresar_MouseEnter(object sender, RoutedEventArgs e) {
@@ -97,26 +96,26 @@ namespace Memorama.Windows {
 
         private Boolean correosIguales() {
             Boolean resultado = false;
-            if (txtCorreo2.Text.Equals(txtCorreo.Text)) {
-                resultado = true ;  
+            if (txtCorreo2.Text.Equals(txtCorreoRW.Text)) {
+                resultado = true;
             }
             return resultado;
         }
         private void txtCorreo_lostFocus(object sender, RoutedEventArgs e) {
             if (!correosIguales()) {
-                txtCorreo.BorderBrush = Brushes.Red;
+                txtCorreoRW.BorderBrush = Brushes.Red;
                 txtCorreo2.BorderBrush = Brushes.Red;
-               
+
                 if (isEnglish()) {
                     lblInfo.Text = "Mail does not match";
                 } else {
                     lblInfo.Text = "El correo no coincide";
                 }
-            } 
+            }
         }
 
         private void txtCorreo_GotFocus(object sender, RoutedEventArgs e) {
-            txtCorreo.BorderBrush = Brushes.White;
+            txtCorreoRW.BorderBrush = Brushes.White;
             txtCorreo2.BorderBrush = Brushes.White;
             lblInfo.Text = "";
         }
@@ -143,7 +142,7 @@ namespace Memorama.Windows {
                 } else {
                     lblInfo.Text = "Las contraseñas no coinciden";
                 }
-            } 
+            }
         }
 
         private void pswContrasenia_GotFocus(object sender, RoutedEventArgs e) {
@@ -154,17 +153,17 @@ namespace Memorama.Windows {
 
         /*
          * 
-         * BOTON REGISTRAR Y VALIDACION DE CAMPOS
+         * VALIDACION DE CAMPOS
          * 
          */
         private Boolean camposLlenos() {
             Boolean resultado = false;
-            if (!txtUsuario.Equals("") & !txtCorreo.Equals("") & !txtCorreo2.Equals("") 
+            if (!txtUsuarioRW.Equals("") & !txtCorreoRW.Equals("") & !txtCorreo2.Equals("")
                 & !pswContrasenia.Password.Equals("") & !pswContrasenia2.Password.Equals("")) {
                 resultado = true;
             }
             return resultado;
-              
+
         }
 
         private Boolean camposCorrectos() {
@@ -177,30 +176,64 @@ namespace Memorama.Windows {
             return resultado;
         }
 
+        /*
+         * 
+         * BOTON REGISTRAR
+         * 
+         */
+
         private void btnRegistrarte_Click(object sender, RoutedEventArgs e) {
+                
+            String username = txtUsuarioRW.Text;
+            String correo = txtCorreoRW.Text;
+            String contrasenia = pswContrasenia.Password;
+            String codigoInt = "";
+            CuadroDialogo dialogo = new CuadroDialogo();
 
             if (camposLlenos() & camposCorrectos()) {
-                // TODO LO DEMAS
 
-                DataAccessServiceClient client = new DataAccessServiceClient();
-                int resultado = client.RegistrarJugador(txtUsuario.Text, txtCorreo.Text, pswContrasenia.Password);
+                    try { 
+                        DataAccessServiceClient client = new DataAccessServiceClient();
 
-                if (resultado==1) {
-                    MessageBoxResult result = MessageBox.Show("Registro exitoso", "Mensaje", MessageBoxButton.OK);
-                    switch (result) {
-                        case MessageBoxResult.OK:
-                            this.Close();
-                            break;
-                    }
-                } else if(resultado==2) {
-                    this.ShowMessageAsync("Alerta", "El correo ya existe");
-                }  
-            } else {
-                if (isEnglish()) {
-                    this.ShowMessageAsync("Warning", "Fill fields correctly");
-                } else {
-                    this.ShowMessageAsync("Advertencia", "Se deben llenar todos los campos correctamente");
+                        if (client.Existe(username, correo)) {
+                            Console.Out.WriteLine("Existe");
+                            MessageBox.Show("Correo Existente", "Mensaje");
+                        //luismanmoga@gmail.com
+                    } else {
+                                //Envio de correo
+                                Correo mail = new Correo();
+                                (var mensaje, var codigo) = mail.EnviarCorreo(correo);
+
+                                if (dialogo.ShowDialog() == dialogo.DialogResult) {
+                                    codigoInt = dialogo.CodigoIntroducido;
+                                }
+                    
+                            if (codigoInt.Equals(codigo)) {
+                                int resultado = client.RegistrarJugador(username, correo, contrasenia);
+                                if (resultado == 1) {
+                                    MessageBoxResult result = MessageBox.Show("Registro exitoso", "Mensaje", MessageBoxButton.OK);
+                                    switch (result) {
+                                        case MessageBoxResult.OK:
+                                            Console.Out.WriteLine("Registrado");
+                                            this.NavigationService.Navigate(new IniciarSesionPG());
+                                            break;
+                                    }
+                                }
+                            } else {
+                            MessageBox.Show("Código erroneo", "Mensaje");
+                        } 
+                        
+                        }
+                    } catch (System.TimeoutException ex) {
+                       // this.ShowMessageAsync("Alerta", ex.Message);
+                    } catch (System.NullReferenceException ex) {
+                    
                 }
+                
+            } else if (isEnglish()) {
+                //this.ShowMessageAsync("Warning", "Fill fields correctly");
+            } else {
+                //this.ShowMessageAsync("Advertencia", "Se deben llenar todos los campos correctamente");
             }
         }
     }

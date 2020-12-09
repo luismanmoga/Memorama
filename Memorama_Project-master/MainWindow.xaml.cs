@@ -22,10 +22,5 @@ namespace Memorama {
         public MainWindow() {
             InitializeComponent();
         }
-
-        private void btnRegistro_Click(object sender, RoutedEventArgs e) {
-            RegistroWin registro = new RegistroWin();
-            registro.Visibility = Visibility.Visible;
-        }
     }
 }

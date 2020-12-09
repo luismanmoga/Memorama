@@ -1,44 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using System.Net;
+using System.Net.Mail;
 
 namespace Memorama.Model {
-    class Correo {
+    public class Correo {
 
-        public void Enviar(String correo) {
-            MailMessage email = new MailMessage();
-            SmtpClient smtp = new SmtpClient();
+        public String GenerarCodigo() {
+            int longitud = 7;
+            const string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder token = new StringBuilder();
+            Random rnd = new Random();
 
-            email.To.Add(new MailAddress(correo));
-            email.From = new MailAddress(correo);
-            email.Subject = "CODE ( " + DateTime.Now.ToString("dd / MMM / yyy hh:mm:ss") + " ) ";
-            email.Body = "Cualquier contenido en <b>HTML</b> para enviarlo por correo electrónico.";
-            email.IsBodyHtml = true;
-            email.Priority = MailPriority.Normal;
+            for (int i = 0; i < longitud; i++) {
+                int indice = rnd.Next(alfabeto.Length);
+                token.Append(alfabeto[indice]);
+            }
+            return token.ToString();
+        }
 
-            smtp.Host = "gmail.com";
-            smtp.Port = 2525;
-            smtp.EnableSsl = false;
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("memoramaapp@gmail.com", "tecnologiasparalaconstruccion");
+       public (string, String) EnviarCorreo(String destino) {
+            String code = GenerarCodigo();
+            String body = @"<style>
+                            h1{color:dodgerblue;}
+                            h2{color:darkorange;}
+                            </style>
+                            <h1>Gracias por registrarse, su código de confirmación es: </h1>" + code +
+                            "</br> <h2>No contestar este correo.</h2>";
 
-            string output = null;
+            String mensaje =  "Error al enviar mensaje";
+            String from = "zS18012160@estudiantes.uv.mx";
+            String displayName = "Memorama";
 
-           // try {
-                smtp.Send(email);
-                email.Dispose();
-               // output = "Corre electrónico fue enviado satisfactoriamente.";
-           // } catch (Exception ex) {
-                //output = "Error enviando correo electrónico: " + ex.Message;
-            //}
-                //Console.WriteLine(output);
+            try {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(from, displayName);
+                mail.To.Add(destino);
+
+                mail.Subject = "Código de confirmación";
+                mail.Body = body;
+                mail.IsBodyHtml = true;
+
+                SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+                client.Credentials = new NetworkCredential(from, "MoGa1999Rexy");
+                client.EnableSsl = true;
+
+                client.Send(mail);
+                mensaje = "¡Se ha enviado el código de activación a su correo!";
+
+
+            } catch (SmtpException ex) {
+                mensaje = ex.Message;
+            } catch (FormatException ex ) {
+                mensaje = ex.Message;
+            }
+            return (mensaje, code);
         }
     }
-
 }
-

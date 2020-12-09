@@ -6,11 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Memorama.Model {
-    [DataContract]
+    
     class Jugador {
+        
+        private static Jugador instancia;
 
-        String username;
-        String correo;
-        String contrasenia;
+        private Jugador() {
+
+        }
+
+        public static Jugador GetJugador() {
+            if (instancia == null) {
+                instancia = new Jugador();
+            } 
+            return instancia;
+        }
+
+
     }
 }

@@ -7,17 +7,17 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Memorama.Pages"
       xmlns:p = "clr-namespace:Memorama.Languages"
-      mc:Ignorable="d" 
-      d:DesignHeight="380" d:DesignWidth="500"
-      Title="ConfirmarCuentaPG">
+      mc:Ignorable="d" d:DesignWidth="500"
+      Title="ConfirmarCuentaPG" Height="265">
     <Page.Background>
         <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
     </Page.Background>
 
     <Grid>
-        <Rectangle Fill="#FF517EB0" HorizontalAlignment="Left" Height="55" Margin="80,30,0,0" VerticalAlignment="Top" Width="355" RadiusX="25" RadiusY="50"/>
-        <Label Content="Validar Cuenta" HorizontalAlignment="Left" Margin="180,42,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="20"/>
+        <Rectangle Fill="#FF517EB0" HorizontalAlignment="Left" Height="55" Margin="70,80,0,0" VerticalAlignment="Top" Width="355" RadiusX="25" RadiusY="50"/>
+        <Label Content="Validar Cuenta" HorizontalAlignment="Left" Margin="165,90,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="20"/>
         <TextBox Name = "txtCodigo" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCodigo}" HorizontalAlignment="Left" Height="35" Margin="120,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" FontSize="15" Foreground="White" BorderBrush="Black" BorderThickness="0,0,0,2"/>
-        
+        <Button Name="btnConfirmar"  Content="{x:Static p:Resources.btnConfirmar}" Click="btnConfirmar_Click" HorizontalAlignment="Left" Margin="120,215,0,0" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" />
+
     </Grid>
 </Page>

@@ -24,6 +24,7 @@ namespace DataAccess
         public string Username { get; set; }
         public string Correo { get; set; }
         public string Contrasenia { get; set; }
+        public string Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PuntuacionSet> PuntuacionSet { get; set; }
