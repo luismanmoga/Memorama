@@ -53,11 +53,9 @@ namespace Memorama.Pages {
             if (CamposLlenos()) {
                 try {
                     if (client.Autenticar(txtCorreo.Text, txtContrasenia.Password)) {
-                        //MessageBox.Show("correcto");
                         Inicio ventanaInicio = new Inicio();
                         ventanaInicio.Show();
                         client.Close();
-                        //this.Close();
                     } else {
                        // this.ShowMessageAsync("Alerta", "Usuario/Contraseña incorrecta");
                     }
