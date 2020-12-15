@@ -1,4 +1,5 @@
-﻿using Memorama.DataAccessService;
+﻿using MahApps.Metro.Controls;
+using Memorama.DataAccessService;
 using Memorama.Model;
 using Memorama.Windows;
 using System;
@@ -10,7 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-
+using MahApps.Metro.Controls.Dialogs;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -187,8 +188,9 @@ namespace Memorama.Pages {
             String username = txtUsuarioRW.Text;
             String correo = txtCorreoRW.Text;
             String contrasenia = pswContrasenia.Password;
-            String codigoInt = "";
-            CuadroDialogo dialogo = new CuadroDialogo();
+            String codigoInt = "x";
+            
+            Boolean endDO = false;
 
             if (camposLlenos() & camposCorrectos()) {
 
@@ -197,43 +199,49 @@ namespace Memorama.Pages {
 
                         if (client.Existe(username, correo)) {
                             Console.Out.WriteLine("Existe");
-                            MessageBox.Show("Correo Existente", "Mensaje");
+                            MessageBox.Show("Correo y/o Username existente", "Mensaje");
                         //luismanmoga@gmail.com
-                    } else {
+
+                        } else {
                                 //Envio de correo
                                 Correo mail = new Correo();
                                 (var mensaje, var codigo) = mail.EnviarCorreo(correo);
 
-                                if (dialogo.ShowDialog() == dialogo.DialogResult) {
-                                    codigoInt = dialogo.CodigoIntroducido;
-                                }
-                    
+                        do {
+                            CuadroDialogo dialogo = new CuadroDialogo();
+                            if (dialogo.ShowDialog() == dialogo.DialogResult) {
+                                codigoInt = dialogo.CodigoIntroducido;
+                            }
+
                             if (codigoInt.Equals(codigo)) {
                                 int resultado = client.RegistrarJugador(username, correo, contrasenia);
                                 if (resultado == 1) {
-                                    MessageBoxResult result = MessageBox.Show("Registro exitoso", "Mensaje", MessageBoxButton.OK);
-                                    switch (result) {
-                                        case MessageBoxResult.OK:
+                                    //MessageBoxResult result = MessageBox.Show("Registro exitoso", "Mensaje", MessageBoxButton.OK);
+                                   // switch (result) {
+                                     //   case MessageBoxResult.OK:
                                             Console.Out.WriteLine("Registrado");
                                             this.NavigationService.Navigate(new IniciarSesionPG());
-                                            break;
-                                    }
+                                       //     break;
+                                   // }
+                                    endDO = true;
                                 }
                             } else {
-                            MessageBox.Show("Código erroneo", "Mensaje");
-                        } 
-                        
+                                MessageBox.Show("Código erroneo", "Mensaje");
+                            }
+
+                        } while (!endDO);
+
                         }
                     } catch (System.TimeoutException ex) {
-                       // this.ShowMessageAsync("Alerta", ex.Message);
-                    } catch (System.NullReferenceException ex) {
+                    ((MetroWindow)(Application.Current.MainWindow)).ShowMessageAsync("Alerta","Tiempo de espera agotado");
+                } catch (System.NullReferenceException ex) {
                     
                 }
                 
             } else if (isEnglish()) {
-                //this.ShowMessageAsync("Warning", "Fill fields correctly");
+                ((MetroWindow)(Application.Current.MainWindow)).ShowMessageAsync("Warning", "Fill fields correctly");
             } else {
-                //this.ShowMessageAsync("Advertencia", "Se deben llenar todos los campos correctamente");
+                ((MetroWindow)(Application.Current.MainWindow)).ShowMessageAsync("Advertencia", "Se deben llenar todos los campos correctamente");
             }
         }
     }

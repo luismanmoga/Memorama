@@ -1,4 +1,7 @@
 ﻿using MahApps.Metro.Controls;
+using Memorama.Model;
+using Memorama.Pages;
+using Memorama.Languages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,20 +21,10 @@ namespace Memorama.Windows {
     /// Lógica de interacción para Inicio.xaml
     /// </summary>
     public partial class Inicio : MetroWindow {
+       // ResXResourceSet ResourceSet = new ResXResourceSet(new Uri(@".Languages\Resources.resx",));
         public Inicio() {
             InitializeComponent();
+            frameInicio.Navigate(new InicioPG());
         }
-
-
-        /*
-        * 
-        * SALIR
-        * 
-        */
-        private void btnSalir_Click(object sender, RoutedEventArgs e) {
-            this.Close();
-        }
-
-
     }
 }

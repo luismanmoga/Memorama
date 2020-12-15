@@ -88,6 +88,24 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Introduce Código.
+        /// </summary>
+        public static string lblCodigo {
+            get {
+                return ResourceManager.GetString("lblCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se ha enviado un código al correo registrado.
+        /// </summary>
+        public static string lblCodigoInfo {
+            get {
+                return ResourceManager.GetString("lblCodigoInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Registrarse.
         /// </summary>
         public static string lblRegistrarse {
@@ -111,6 +129,15 @@ namespace Memorama.Languages {
         public static string lblSalir {
             get {
                 return ResourceManager.GetString("lblSalir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bienvenido.
+        /// </summary>
+        public static string MensajeBienvenida {
+            get {
+                return ResourceManager.GetString("MensajeBienvenida", resourceCulture);
             }
         }
         
@@ -160,7 +187,7 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Código.
+        ///   Busca una cadena traducida similar a Escriba el código aquí.
         /// </summary>
         public static string txtCodigo {
             get {

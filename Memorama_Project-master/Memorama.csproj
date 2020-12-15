@@ -118,7 +118,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Model\Jugador.cs" />
+    <Compile Include="Model\JugadorSingleton.cs" />
     <Compile Include="Model\Correo.cs" />
     <Compile Include="Pages\ConfirmarCuentaPG.xaml.cs">
       <DependentUpon>ConfirmarCuentaPG.xaml</DependentUpon>
@@ -128,6 +128,9 @@
     </Compile>
     <Compile Include="Pages\IniciarSesionPG.xaml.cs">
       <DependentUpon>IniciarSesionPG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InicioPG.xaml.cs">
+      <DependentUpon>InicioPG.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RecuperarPassPg.xaml.cs">
       <DependentUpon>RecuperarPassPg.xaml</DependentUpon>
@@ -174,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\IniciarSesionPG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InicioPG.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

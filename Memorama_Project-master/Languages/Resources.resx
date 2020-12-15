@@ -126,6 +126,12 @@
   <data name="btnIniciarSesion" xml:space="preserve">
     <value>Iniciar Sesión</value>
   </data>
+  <data name="lblCodigo" xml:space="preserve">
+    <value>Introduce Código</value>
+  </data>
+  <data name="lblCodigoInfo" xml:space="preserve">
+    <value>Se ha enviado un código al correo registrado</value>
+  </data>
   <data name="lblRegistrarse" xml:space="preserve">
     <value>Registrarse</value>
   </data>
@@ -134,6 +140,9 @@
   </data>
   <data name="lblSalir" xml:space="preserve">
     <value>Salir</value>
+  </data>
+  <data name="MensajeBienvenida" xml:space="preserve">
+    <value>Bienvenido</value>
   </data>
   <data name="pswContrasenia" xml:space="preserve">
     <value>Contraseña</value>
@@ -151,7 +160,7 @@
     <value>REGISTRO DE JUGADOR</value>
   </data>
   <data name="txtCodigo" xml:space="preserve">
-    <value>Código</value>
+    <value>Escriba el código aquí</value>
   </data>
   <data name="txtCorreo" xml:space="preserve">
     <value>Correo</value>

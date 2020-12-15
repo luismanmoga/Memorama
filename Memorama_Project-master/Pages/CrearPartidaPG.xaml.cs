@@ -1,4 +1,5 @@
 ﻿using Memorama.ChatService;
+using Memorama.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace Memorama.Pages {
     public partial class CrearPartidaPG : Page {
         public CrearPartidaPG() {
             InitializeComponent();
+            tbBanEntrada.Text = JugadorSingleton.GetJugador().Username;
         }
 
        

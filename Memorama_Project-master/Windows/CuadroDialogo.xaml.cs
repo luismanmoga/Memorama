@@ -33,8 +33,14 @@ namespace Memorama.Windows {
 
         private void btnRegistrarte_Click(object sender, RoutedEventArgs e) {
             // return txtCodigo.Text;
-            DialogResult = true;
-            this.Close();
+           
+            if (!String.IsNullOrEmpty(txtCodigo.Text) ) {
+                DialogResult = true;
+                this.Close();
+            } else {
+                this.ShowMessageAsync("Alerta", "Escriba el código");
+            }
+            
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e) {

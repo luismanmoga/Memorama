@@ -10,14 +10,10 @@
         mc:Ignorable="d"
         xmlns:p = "clr-namespace:Memorama.Languages"
         Title="RegistroWin" Height="382" Width="504">
+    <Page.Background>
+        <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
+    </Page.Background>
     <Grid HorizontalAlignment="Left" Width="494" Height="347" VerticalAlignment="Top">
-
-        <Rectangle Fill="#FF75AA3E" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="70" Margin="360,0,0,-4"/>
-        <Rectangle Fill="#FFE8DA06" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="71" Margin="425,0,-2,-4"/>
-        <Rectangle Fill="#FFFF387C" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="100" Margin="165,0,0,-4"/>
-        <Rectangle Fill="#FF00C6FF" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="95" Margin="265,0,0,-4"/>
-        <Rectangle Fill="#FF8A8ADA" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="70" Margin="0,0,0,-4"/>
-        <Rectangle Fill="#FFFF0F94" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="95" Margin="70,0,0,-4"/>
 
         <Rectangle HorizontalAlignment="Left" Height="264" Margin="35,73,0,0" RadiusY="15" RadiusX="15" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="Black" StrokeThickness="3" StrokeLineJoin="Round" VerticalAlignment="Top" Width="415" Fill="#7F0C0C0C"/>
         <TextBox x:Name="txtUsuarioRW" MaxLength="16" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtUsuario}" TextWrapping="Wrap" Margin="115,94,0,0" HorizontalAlignment="Left" Width="260" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" BorderThickness="0,0,0,2" Background="{x:Null}"/>
@@ -32,8 +28,8 @@
                      FontFamily="Showcard Gothic" Foreground="White" materialDesign:HintAssist.Hint="{x:Static p:Resources.pswContrasenia2}"
                      MaxLength="8" LostFocus="pswContrsenias_lostFocus"  />
 
-        <Rectangle HorizontalAlignment="Right" Height="50" Margin="0,15,10,0" Stroke="Black" VerticalAlignment="Top" Width="474" StrokeStartLineCap="Round" StrokeLineJoin="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="3" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.txbTitulo}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="Black" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Right" Height="50" Margin="0,15,10,0" Stroke="Black" VerticalAlignment="Top" Width="474" StrokeStartLineCap="Round" StrokeLineJoin="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="3" RadiusX="15" RadiusY="15" OpacityMask="#FFAEAEAE" Fill="#7F303030"/>
+        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.txbTitulo}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="#BFFFFFFF" FontWeight="Bold"/>
         <Button Name="btnRegistrarte" Content="{x:Static p:Resources.btnEndRegister}" HorizontalAlignment="Left" Margin="115,288,0,0" 
                 VerticalAlignment="Top" Width="260" Background="#FF8561C5" Click="btnRegistrarte_Click"  />
         <Button Name="btnRegresar" Click="btnRegresar_Click" MouseEnter="btnRegresar_MouseEnter" MouseLeave="btnRegresar_MouseLeave"
@@ -55,7 +51,7 @@
                     Margin="9,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" OpacityMask="#BF000000" />
             </StackPanel>
         </Button>
-        <TextBlock Name="lblInfo" HorizontalAlignment="Left" Margin="116,245,0,0" TextWrapping="Wrap" Text="" Width="258" Height="38" FontFamily="Showcard Gothic" VerticalAlignment="Top"/>
+        <TextBlock Name="lblInfo" HorizontalAlignment="Left" Margin="116,245,0,0" TextWrapping="Wrap" Text="" Width="258" Height="38" FontFamily="Showcard Gothic" VerticalAlignment="Top" Background="#3FFFFFFF"/>
         <Label Name="lblRegresar" Content="{x:Static p:Resources.lblRegresar}" Visibility="Hidden" HorizontalAlignment="Left" Margin="62,29,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
     </Grid>
 </Page>

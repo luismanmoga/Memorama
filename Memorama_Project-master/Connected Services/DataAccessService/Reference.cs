@@ -107,10 +107,10 @@ namespace Memorama.DataAccessService {
         System.Threading.Tasks.Task<Memorama.DataAccessService.Jugador> GetJugadorAsync(string correo, string contrsenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Autenticar", ReplyAction="http://tempuri.org/IDataAccessService/AutenticarResponse")]
-        bool Autenticar(string correo, string contrasenia);
+        bool Autenticar(string username, string contrasenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Autenticar", ReplyAction="http://tempuri.org/IDataAccessService/AutenticarResponse")]
-        System.Threading.Tasks.Task<bool> AutenticarAsync(string correo, string contrasenia);
+        System.Threading.Tasks.Task<bool> AutenticarAsync(string username, string contrasenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Existe", ReplyAction="http://tempuri.org/IDataAccessService/ExisteResponse")]
         bool Existe(string username, string correo);
@@ -162,12 +162,12 @@ namespace Memorama.DataAccessService {
             return base.Channel.GetJugadorAsync(correo, contrsenia);
         }
         
-        public bool Autenticar(string correo, string contrasenia) {
-            return base.Channel.Autenticar(correo, contrasenia);
+        public bool Autenticar(string username, string contrasenia) {
+            return base.Channel.Autenticar(username, contrasenia);
         }
         
-        public System.Threading.Tasks.Task<bool> AutenticarAsync(string correo, string contrasenia) {
-            return base.Channel.AutenticarAsync(correo, contrasenia);
+        public System.Threading.Tasks.Task<bool> AutenticarAsync(string username, string contrasenia) {
+            return base.Channel.AutenticarAsync(username, contrasenia);
         }
         
         public bool Existe(string username, string correo) {
