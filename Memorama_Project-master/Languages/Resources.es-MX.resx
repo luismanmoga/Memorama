@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnIniciarSesion" xml:space="preserve">
-    <value>Iniciar Sesión</value>
-  </data>
-  <data name="lblContrasenia" xml:space="preserve">
+  <data name="Contrasenia" xml:space="preserve">
     <value>Contraseña</value>
   </data>
-  <data name="lblContrasenia2" xml:space="preserve">
-    <value>Repetir Contraseña</value>
-  </data>
-  <data name="lblCorreo" xml:space="preserve">
+  <data name="Correo" xml:space="preserve">
     <value>Correo</value>
   </data>
-  <data name="lblCorreo2" xml:space="preserve">
-    <value>Repetir correo</value>
+  <data name="IniciarSesion" xml:space="preserve">
+    <value>Iniciar Sesión</value>
   </data>
-  <data name="lblNombre" xml:space="preserve">
+  <data name="Nombre" xml:space="preserve">
     <value>Nombre</value>
   </data>
-  <data name="lblRegistrarse" xml:space="preserve">
+  <data name="Registrarse" xml:space="preserve">
     <value>Registrarse</value>
   </data>
-  <data name="lblUsuario" xml:space="preserve">
-    <value>Usuario</value>
-  </data>
-  <data name="txbTitulo" xml:space="preserve">
+  <data name="RegistroJugador" xml:space="preserve">
     <value>REGISTRO DE JUGADOR</value>
+  </data>
+  <data name="RepContrasenia" xml:space="preserve">
+    <value>Repetir Contraseña</value>
+  </data>
+  <data name="RepCorreo" xml:space="preserve">
+    <value>Repetir correo</value>
+  </data>
+  <data name="Usuario" xml:space="preserve">
+    <value>Usuario</value>
   </data>
 </root>

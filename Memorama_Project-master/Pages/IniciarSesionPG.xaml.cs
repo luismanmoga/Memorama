@@ -70,6 +70,21 @@ namespace Memorama.Pages {
             } else {
                 ((MetroWindow)(Application.Current.MainWindow)).ShowMessageAsync("Alerta", "Campos incompletos");
             }
+
+            //BORRAR
+            /*Inicio ventanaInicio = new Inicio();
+            ventanaInicio.Show();
+            Window.GetWindow(this).Close();*/
+        }
+
+        private void btnOlvideContrasenia_Click(object sender, RoutedEventArgs e) {
+            this.NavigationService.Navigate(new RecuperarContraseniaPG());
+        }
+
+        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e) {
+            if (e.Key == Key.Enter) {
+                BtnIniciarSesion_Click(sender, e);
+            }
         }
     }
 }

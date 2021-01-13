@@ -61,74 +61,146 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Confirmar.
+        ///   Busca una cadena traducida similar a Activado.
         /// </summary>
-        public static string btnConfirmar {
+        public static string Activado {
             get {
-                return ResourceManager.GetString("btnConfirmar", resourceCulture);
+                return ResourceManager.GetString("Activado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Registrarte.
+        ///   Busca una cadena traducida similar a Alerta.
         /// </summary>
-        public static string btnEndRegister {
+        public static string Alerta {
             get {
-                return ResourceManager.GetString("btnEndRegister", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Iniciar Sesión.
-        /// </summary>
-        public static string btnIniciarSesion {
-            get {
-                return ResourceManager.GetString("btnIniciarSesion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Introduce Código.
-        /// </summary>
-        public static string lblCodigo {
-            get {
-                return ResourceManager.GetString("lblCodigo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Se ha enviado un código al correo registrado.
-        /// </summary>
-        public static string lblCodigoInfo {
-            get {
-                return ResourceManager.GetString("lblCodigoInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Registrarse.
-        /// </summary>
-        public static string lblRegistrarse {
-            get {
-                return ResourceManager.GetString("lblRegistrarse", resourceCulture);
+                return ResourceManager.GetString("Alerta", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Atrás.
         /// </summary>
-        public static string lblRegresar {
+        public static string Atras {
             get {
-                return ResourceManager.GetString("lblRegresar", resourceCulture);
+                return ResourceManager.GetString("Atras", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Salir.
+        ///   Busca una cadena traducida similar a Introduce Código.
         /// </summary>
-        public static string lblSalir {
+        public static string Codigo {
             get {
-                return ResourceManager.GetString("lblSalir", resourceCulture);
+                return ResourceManager.GetString("Codigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirmar.
+        /// </summary>
+        public static string Confirmar {
+            get {
+                return ResourceManager.GetString("Confirmar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña.
+        /// </summary>
+        public static string Contrasenia {
+            get {
+                return ResourceManager.GetString("Contrasenia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        public static string Correo {
+            get {
+                return ResourceManager.GetString("Correo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear Sala.
+        /// </summary>
+        public static string Crear {
+            get {
+                return ResourceManager.GetString("Crear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nueva Partida.
+        /// </summary>
+        public static string CrearPartida {
+            get {
+                return ResourceManager.GetString("CrearPartida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Aa.
+        /// </summary>
+        public static string CuadroMensaje {
+            get {
+                return ResourceManager.GetString("CuadroMensaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Desactivado.
+        /// </summary>
+        public static string Desactivado {
+            get {
+                return ResourceManager.GetString("Desactivado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar.
+        /// </summary>
+        public static string Enviar {
+            get {
+                return ResourceManager.GetString("Enviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Escriba el código aquí.
+        /// </summary>
+        public static string EscCodigoAqui {
+            get {
+                return ResourceManager.GetString("EscCodigoAqui", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa Correo.
+        /// </summary>
+        public static string IngresaCorreo {
+            get {
+                return ResourceManager.GetString("IngresaCorreo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Iniciar Sesión.
+        /// </summary>
+        public static string IniciarSesion {
+            get {
+                return ResourceManager.GetString("IniciarSesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Jugador.
+        /// </summary>
+        public static string Jugador {
+            get {
+                return ResourceManager.GetString("Jugador", resourceCulture);
             }
         }
         
@@ -142,83 +214,146 @@ namespace Memorama.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Contraseña.
+        ///   Busca una cadena traducida similar a Ingrese su contraseña nueva.
         /// </summary>
-        public static string pswContrasenia {
+        public static string NuevaContrasenia {
             get {
-                return ResourceManager.GetString("pswContrasenia", resourceCulture);
+                return ResourceManager.GetString("NuevaContrasenia", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Repetir Contraseña.
+        ///   Busca una cadena traducida similar a Olvide mi contraseña.
         /// </summary>
-        public static string pswContrasenia2 {
+        public static string OlvideContrasenia {
             get {
-                return ResourceManager.GetString("pswContrasenia2", resourceCulture);
+                return ResourceManager.GetString("OlvideContrasenia", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Inicio de Sesión.
+        ///   Busca una cadena traducida similar a Refrescar.
         /// </summary>
-        public static string tIniciarSesion {
+        public static string Refrescar {
             get {
-                return ResourceManager.GetString("tIniciarSesion", resourceCulture);
+                return ResourceManager.GetString("Refrescar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registrarte.
+        /// </summary>
+        public static string Registrarte {
+            get {
+                return ResourceManager.GetString("Registrarte", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Registro.
         /// </summary>
-        public static string tRegistrarse {
+        public static string Registro {
             get {
-                return ResourceManager.GetString("tRegistrarse", resourceCulture);
+                return ResourceManager.GetString("Registro", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a REGISTRO DE JUGADOR.
         /// </summary>
-        public static string txbTitulo {
+        public static string RegistroJugador {
             get {
-                return ResourceManager.GetString("txbTitulo", resourceCulture);
+                return ResourceManager.GetString("RegistroJugador", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Escriba el código aquí.
+        ///   Busca una cadena traducida similar a Se ha enviado un código al correo registrado.
         /// </summary>
-        public static string txtCodigo {
+        public static string RepCodigo {
             get {
-                return ResourceManager.GetString("txtCodigo", resourceCulture);
+                return ResourceManager.GetString("RepCodigo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Correo.
+        ///   Busca una cadena traducida similar a Repetir Contraseña.
         /// </summary>
-        public static string txtCorreo {
+        public static string RepContrasenia {
             get {
-                return ResourceManager.GetString("txtCorreo", resourceCulture);
+                return ResourceManager.GetString("RepContrasenia", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Repetir correo.
         /// </summary>
-        public static string txtCorreo2 {
+        public static string RepCorreo {
             get {
-                return ResourceManager.GetString("txtCorreo2", resourceCulture);
+                return ResourceManager.GetString("RepCorreo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        public static string Salir {
+            get {
+                return ResourceManager.GetString("Salir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream song {
+            get {
+                return ResourceManager.GetStream("song", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sonido.
+        /// </summary>
+        public static string Sonido {
+            get {
+                return ResourceManager.GetString("Sonido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Partidas .
+        /// </summary>
+        public static string UnirsePartida {
+            get {
+                return ResourceManager.GetString("UnirsePartida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usuario y/o correo existente.
+        /// </summary>
+        public static string UserCorreoExiste {
+            get {
+                return ResourceManager.GetString("UserCorreoExiste", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Usuario.
         /// </summary>
-        public static string txtUsuario {
+        public static string Usuario {
             get {
-                return ResourceManager.GetString("txtUsuario", resourceCulture);
+                return ResourceManager.GetString("Usuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Validar Cuenta.
+        /// </summary>
+        public static string ValidarCuenta {
+            get {
+                return ResourceManager.GetString("ValidarCuenta", resourceCulture);
             }
         }
     }

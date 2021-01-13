@@ -1,0 +1,28 @@
+﻿<Page x:Class="Memorama.Pages.ConfiguracionPG"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Memorama.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ConfiguracionPG">
+    <Page.Background>
+        <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
+    </Page.Background>
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="65" Margin="220,10,0,0" VerticalAlignment="Top" Width="345" RadiusX="20" RadiusY="20" Fill="#FF006CD8"/>
+        <Button Name="btnAtras" Click="btnAtras_Click" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderThickness="0" 
+                Style="{DynamicResource MahApps.Styles.Button.Circle}" Background="#FFDAAA05" Cursor="Hand">
+            <materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="45" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFE6E6E6"/>
+        </Button>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="370,115,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontFamily="Showcard Gothic" FontSize="16"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="285,178,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="White" Background="#FFFDFDFD" FontSize="14" FontFamily="Showcard Gothic"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="427,178,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" FontSize="14" FontFamily="Showcard Gothic"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="370,225,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Image Name="imgMX" MouseDown="imgMX_MouseDown" HorizontalAlignment="Left" Height="100" Margin="185,280,0,0" VerticalAlignment="Top" Width="179" Source="/Memorama;component/Resources/Bandera_MX.png" Stretch="UniformToFill" Cursor="Hand"/>
+        <Image Name="imgEU" MouseDown="imgEU_MouseDown" HorizontalAlignment="Left" Height="100" Margin="440,280,0,0" VerticalAlignment="Top" Width="165" Source="/Memorama;component/Resources/Bandera_EU.png" Stretch="UniformToFill" Cursor="Hand"/>
+    </Grid>
+</Page>

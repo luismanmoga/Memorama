@@ -1,0 +1,34 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Memorama.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Memorama.Pages.UnirsePartidaPG"
+      mc:Ignorable="d"
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:p = "clr-namespace:Memorama.Languages"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UnirsePartidaPG">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
+        </Grid.Background>
+        <Button x:Name="btnRefrescar" Click="btnRefrescar_Click" Content="{x:Static p:Resources.Refrescar}" HorizontalAlignment="Left" Margin="120,385,0,0" VerticalAlignment="Top" Width="125" FontFamily="Showcard Gothic" Height="35"/>
+        <ListView x:Name="lsVPartidasActivas" HorizontalAlignment="Left" Height="245" Margin="120,110,0,0" VerticalAlignment="Top" Width="570" Background="#FFFDFBFB" BorderBrush="#89FFFFFF" Foreground="White" OpacityMask="White">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="65" Margin="230,10,0,0" VerticalAlignment="Top" Width="345" RadiusX="20" RadiusY="20" Fill="#FF006CD8"/>
+        <Label x:Name="lblTitCrearPartida" Content="{x:Static p:Resources.UnirsePartida}" HorizontalAlignment="Left" Margin="350,20,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Showcard Gothic"/>
+        <Button x:Name="btnAtras" Click="btnAtras_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" BorderThickness="0" 
+                Style="{DynamicResource MahApps.Styles.Button.Circle}" Background="#FFDAAA05" Cursor="Hand" Margin="45,20,0,0">
+            <materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="45" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFE6E6E6"/>
+        </Button>
+
+    </Grid>
+</Page>

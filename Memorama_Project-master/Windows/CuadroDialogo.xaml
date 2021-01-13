@@ -19,15 +19,15 @@
         </Grid.ColumnDefinitions>
 
         <Rectangle HorizontalAlignment="Left" Height="133" Margin="35,73,0,0" RadiusY="15" RadiusX="15" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="Black" StrokeThickness="3" StrokeLineJoin="Round" VerticalAlignment="Top" Width="415" Fill="#7F0C0C0C"/>
-        <TextBox x:Name="txtCodigo" MaxLength="16" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCodigo}" TextWrapping="Wrap" Margin="115,118,0,0" 
+        <TextBox x:Name="txtCodigo" MaxLength="16" materialDesign:HintAssist.Hint="{x:Static p:Resources.Codigo}" TextWrapping="Wrap" Margin="115,118,0,0" 
                  HorizontalAlignment="Left" Width="260" Height="24" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" 
                  BorderThickness="0,0,0,2" Background="{x:Null}" TextChanged="txtCodigo_TextChanged" />
 
         <Rectangle HorizontalAlignment="Right" Height="50" Margin="0,15,10,0" Stroke="Black" VerticalAlignment="Top" Width="474" StrokeStartLineCap="Round" StrokeLineJoin="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="3" RadiusX="15" RadiusY="15"/>
-        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.lblCodigo}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="Black" FontWeight="Bold"/>
-        <Button Name="btnRegistrarte" Content="{x:Static p:Resources.btnEndRegister}" HorizontalAlignment="Left" Margin="251,158,0,0" 
+        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.Codigo}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="Black" FontWeight="Bold"/>
+        <Button Name="btnRegistrarte" Content="{x:Static p:Resources.Registrarte}" HorizontalAlignment="Left" Margin="251,158,0,0" 
                 VerticalAlignment="Top" Width="124" Background="#FF8561C5" Click="btnRegistrarte_Click"  />
         <Button Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="115,158,0,0" VerticalAlignment="Top" Width="115" Click="btnCancelar_Click"/>
-        <Label Name="lblCodigoInfo" Content="{x:Static p:Resources.lblCodigoInfo}"  HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>
+        <Label Name="lblCodigoInfo" Content="{x:Static p:Resources.Codigo}"  HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>
     </Grid>
 </mah:MetroWindow>

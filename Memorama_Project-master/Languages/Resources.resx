@@ -117,58 +117,104 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnConfirmar" xml:space="preserve">
-    <value>Confirmar</value>
+  <data name="Activado" xml:space="preserve">
+    <value>Activado</value>
   </data>
-  <data name="btnEndRegister" xml:space="preserve">
-    <value>Registrarte</value>
+  <data name="Alerta" xml:space="preserve">
+    <value>Alerta</value>
   </data>
-  <data name="btnIniciarSesion" xml:space="preserve">
-    <value>Iniciar Sesión</value>
-  </data>
-  <data name="lblCodigo" xml:space="preserve">
-    <value>Introduce Código</value>
-  </data>
-  <data name="lblCodigoInfo" xml:space="preserve">
-    <value>Se ha enviado un código al correo registrado</value>
-  </data>
-  <data name="lblRegistrarse" xml:space="preserve">
-    <value>Registrarse</value>
-  </data>
-  <data name="lblRegresar" xml:space="preserve">
+  <data name="Atras" xml:space="preserve">
     <value>Atrás</value>
   </data>
-  <data name="lblSalir" xml:space="preserve">
-    <value>Salir</value>
+  <data name="Codigo" xml:space="preserve">
+    <value>Introduce Código</value>
+  </data>
+  <data name="Confirmar" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Contrasenia" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Correo" xml:space="preserve">
+    <value>Correo</value>
+  </data>
+  <data name="Crear" xml:space="preserve">
+    <value>Crear Sala</value>
+  </data>
+  <data name="CrearPartida" xml:space="preserve">
+    <value>Nueva Partida</value>
+  </data>
+  <data name="CuadroMensaje" xml:space="preserve">
+    <value>Aa</value>
+  </data>
+  <data name="Desactivado" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="Enviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="EscCodigoAqui" xml:space="preserve">
+    <value>Escriba el código aquí</value>
+  </data>
+  <data name="IngresaCorreo" xml:space="preserve">
+    <value>Ingresa Correo</value>
+  </data>
+  <data name="IniciarSesion" xml:space="preserve">
+    <value>Iniciar Sesión</value>
+  </data>
+  <data name="Jugador" xml:space="preserve">
+    <value>Jugador</value>
   </data>
   <data name="MensajeBienvenida" xml:space="preserve">
     <value>Bienvenido</value>
   </data>
-  <data name="pswContrasenia" xml:space="preserve">
-    <value>Contraseña</value>
+  <data name="NuevaContrasenia" xml:space="preserve">
+    <value>Ingrese su contraseña nueva</value>
   </data>
-  <data name="pswContrasenia2" xml:space="preserve">
-    <value>Repetir Contraseña</value>
+  <data name="OlvideContrasenia" xml:space="preserve">
+    <value>Olvide mi contraseña</value>
   </data>
-  <data name="tIniciarSesion" xml:space="preserve">
-    <value>Inicio de Sesión</value>
+  <data name="Refrescar" xml:space="preserve">
+    <value>Refrescar</value>
   </data>
-  <data name="tRegistrarse" xml:space="preserve">
+  <data name="Registrarte" xml:space="preserve">
+    <value>Registrarte</value>
+  </data>
+  <data name="Registro" xml:space="preserve">
     <value>Registro</value>
   </data>
-  <data name="txbTitulo" xml:space="preserve">
+  <data name="RegistroJugador" xml:space="preserve">
     <value>REGISTRO DE JUGADOR</value>
   </data>
-  <data name="txtCodigo" xml:space="preserve">
-    <value>Escriba el código aquí</value>
+  <data name="RepCodigo" xml:space="preserve">
+    <value>Se ha enviado un código al correo registrado</value>
   </data>
-  <data name="txtCorreo" xml:space="preserve">
-    <value>Correo</value>
+  <data name="RepContrasenia" xml:space="preserve">
+    <value>Repetir Contraseña</value>
   </data>
-  <data name="txtCorreo2" xml:space="preserve">
+  <data name="RepCorreo" xml:space="preserve">
     <value>Repetir correo</value>
   </data>
-  <data name="txtUsuario" xml:space="preserve">
+  <data name="Salir" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="song" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\song.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Sonido" xml:space="preserve">
+    <value>Sonido</value>
+  </data>
+  <data name="UnirsePartida" xml:space="preserve">
+    <value>Partidas </value>
+  </data>
+  <data name="UserCorreoExiste" xml:space="preserve">
+    <value>Usuario y/o correo existente</value>
+  </data>
+  <data name="Usuario" xml:space="preserve">
     <value>Usuario</value>
+  </data>
+  <data name="ValidarCuenta" xml:space="preserve">
+    <value>Validar Cuenta</value>
   </data>
 </root>

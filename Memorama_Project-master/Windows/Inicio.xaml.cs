@@ -15,16 +15,35 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Media;
+using Memorama.PartidaService;
 
 namespace Memorama.Windows {
     /// <summary>
     /// Lógica de interacción para Inicio.xaml
     /// </summary>
     public partial class Inicio : MetroWindow {
-       // ResXResourceSet ResourceSet = new ResXResourceSet(new Uri(@".Languages\Resources.resx",));
+        // ResXResourceSet ResourceSet = new ResXResourceSet(new Uri(@".Languages\Resources.resx",));
+        PartidaServiceClient client = new PartidaServiceClient();
         public Inicio() {
             InitializeComponent();
             frameInicio.Navigate(new InicioPG());
+            meMusicaFondo.Play();
+            SoundPlayer sound = new SoundPlayer();
+            //sound.SoundLocation = "..Resources\song.wav";
+            //
+            sound.Play();
+        }
+
+        public void musicOn(int value) {
+            if (value==0) {
+
+            }
+        }
+
+        private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+            client.EliminarPartida(JugadorSingleton.GetJugador().Username);
         }
     }
 }

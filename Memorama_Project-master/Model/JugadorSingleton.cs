@@ -14,14 +14,17 @@ namespace Memorama.Model {
 
         private String username;
         private String correo;
+        private String contrasenia;
 
         private JugadorSingleton(Jugador jugador) {
             this.username = jugador.Username;
             this.correo = jugador.Correo;
+            this.contrasenia = jugador.Contrasenia;
         }
 
         public string Username { get => username; set => username = value; }
         public string Correo { get => correo; set => correo = value; }
+        public string Contrasenia { get => contrasenia; set => contrasenia = value; }
 
         public static JugadorSingleton GetJugador(Jugador jugador) {
             if (instancia == null) {

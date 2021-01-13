@@ -5,6 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Memorama.Pages"
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:p = "clr-namespace:Memorama.Languages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CrearPartidaPG">
@@ -13,12 +15,35 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Memorama;component/Resources/Background.jpg"/>
         </Grid.Background>
-        <TextBlock Name="tbBanEntrada" HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="337" Background="White" Width="225"/>
-        <TextBox Name="txtBanSalida" HorizontalAlignment="Left" Height="33" Margin="30,372,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" BorderBrush="#89FFFFFF" Foreground="Black" FontSize="16" Background="White"/>
-        <Button  Name="btnEnviar" HorizontalAlignment="Left" Margin="200,372,0,0" VerticalAlignment="Top" Width="55" Height="33" Background="#FF3AB1B7" BorderBrush="{x:Null}">
+        <TextBlock Name="tbBanEntrada" HorizontalAlignment="Left" Margin="30,140,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="240" Background="White" Width="290"/>
+        <TextBox Name="txtBanSalida" materialDesign:HintAssist.Hint="{x:Static p:Resources.CuadroMensaje}" HorizontalAlignment="Left" Height="33" Margin="30,385,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" BorderBrush="#89FFFFFF" Foreground="Black" FontSize="16" Background="White"/>
+        <Button  x:Name="btnEnviar_Copy" HorizontalAlignment="Left" Margin="265,385,0,0" VerticalAlignment="Top" Width="55" Height="33" Background="#FF3AB1B7" BorderBrush="{x:Null}">
             <materialDesign:PackIcon Kind="Send" Height="25" Width="45" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFE6E6E6"/>
-            
         </Button>
+        <Rectangle HorizontalAlignment="Left" Height="65" Margin="230,10,0,0" VerticalAlignment="Top" Width="345" RadiusX="20" RadiusY="20" Fill="#FF006CD8"/>
+        <Button Name="btnAtras" Click="btnAtras_Click" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderThickness="0" 
+                Style="{DynamicResource MahApps.Styles.Button.Circle}" Background="#FFDAAA05" Cursor="Hand">
+            <materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="45" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFE6E6E6"/>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="55" Margin="70,80,0,0" VerticalAlignment="Top" Width="680" RadiusX="20" RadiusY="20" Fill="White"/>
+        <Ellipse Name="eJugadorUno" Fill="DarkRed" HorizontalAlignment="Left" Height="35" Margin="100,90,0,0" VerticalAlignment="Top" Width="35" Stroke="Black"/>
+        <Ellipse Name="eJugadorDos" Fill="DarkRed" HorizontalAlignment="Left" Height="35" Margin="255,90,0,0" VerticalAlignment="Top" Width="35" Stroke="Black"/>
+        <Ellipse Name="eJugadorTres" Fill="DarkRed" HorizontalAlignment="Left" Height="35" Margin="415,90,0,0" VerticalAlignment="Top" Width="35" Stroke="Black"/>
+        <Ellipse Name="eJugadorCuatro" Fill="DarkRed" HorizontalAlignment="Left" Height="35" Margin="595,90,0,0" VerticalAlignment="Top" Width="35" Stroke="Black"/>
+        <Label Name="lblJugadorUno" Content="{x:Static p:Resources.Jugador}" HorizontalAlignment="Left" Margin="146,95,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14"/>
+        <Label Name="lblJugadorDos" Content="{x:Static p:Resources.Jugador}" HorizontalAlignment="Left" Margin="300,95,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14"/>
+        <Label Name="lblJugadorTres" Content="{x:Static p:Resources.Jugador}" HorizontalAlignment="Left" Margin="465,95,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14"/>
+        <Label Name="lblJugadorCuatro" Content="{x:Static p:Resources.Jugador}" HorizontalAlignment="Left" Margin="645,95,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14"/>
+        <Label Content="{x:Static p:Resources.Sonido}" HorizontalAlignment="Left" Margin="361,155,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="#DDFFFFFF"/>
+        <RadioButton Content="{x:Static p:Resources.Activado}" HorizontalAlignment="Left" Margin="361,195,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Showcard Gothic"/>
+        <RadioButton Content="{x:Static p:Resources.Desactivado}" HorizontalAlignment="Left" Margin="487,195,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Showcard Gothic"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="361,240,0,0" VerticalAlignment="Top" Width="100" Source="/Memorama;component/Resources/Memorama.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="511,240,0,0" VerticalAlignment="Top" Width="100" Source="/Memorama;component/Resources/Memorama.png"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="361,340,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="#DDFFFFFF"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="511,340,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="#DDFFFFFF"/>
+        <Button Name="btnComenzar" Click="btnComenzar_Click" Content="{x:Static p:Resources.Confirmar}" HorizontalAlignment="Left" Margin="665,385,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="btnCrearPartida" Content="{x:Static p:Resources.Crear}"  Click="btnCrearPartida_Click"  HorizontalAlignment="Left" Margin="361,385,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Name="lblTitCrearPartida" Content="{x:Static p:Resources.CrearPartida}" HorizontalAlignment="Left" Margin="310,20,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Showcard Gothic"/>
 
     </Grid>
 </Page>

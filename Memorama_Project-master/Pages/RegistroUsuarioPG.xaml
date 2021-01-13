@@ -16,21 +16,21 @@
     <Grid HorizontalAlignment="Left" Width="494" Height="347" VerticalAlignment="Top">
 
         <Rectangle HorizontalAlignment="Left" Height="264" Margin="35,73,0,0" RadiusY="15" RadiusX="15" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="Black" StrokeThickness="3" StrokeLineJoin="Round" VerticalAlignment="Top" Width="415" Fill="#7F0C0C0C"/>
-        <TextBox x:Name="txtUsuarioRW" MaxLength="16" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtUsuario}" TextWrapping="Wrap" Margin="115,94,0,0" HorizontalAlignment="Left" Width="260" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" BorderThickness="0,0,0,2" Background="{x:Null}"/>
-        <TextBox x:Name="txtCorreoRW" MaxLength="25" GotFocus="txtCorreo_GotFocus"  materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCorreo}" TextWrapping="Wrap" Margin="115,124,0,0" HorizontalAlignment="Left" Width="260" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="WhiteSmoke" BorderThickness="0,0,0,2" Background="{x:Null}"/>
-        <TextBox x:Name="txtCorreo2" MaxLength="25" GotFocus="txtCorreo_GotFocus" LostFocus="txtCorreo_lostFocus"   materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCorreo2}" HorizontalAlignment="Left" TextWrapping="Wrap" Width="260" Margin="115,154,0,0" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" BorderThickness="0,0,0,2" Background="{x:Null}"/>
-        <PasswordBox x:Name="pswContrasenia" materialDesign:HintAssist.Hint="{x:Static p:Resources.pswContrasenia}"
+        <TextBox x:Name="txtUsuarioRW" MaxLength="16" materialDesign:HintAssist.Hint="{x:Static p:Resources.Usuario}" TextWrapping="Wrap" Margin="115,94,0,0" HorizontalAlignment="Left" Width="260" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" BorderThickness="0,0,0,2" Background="{x:Null}"/>
+        <TextBox x:Name="txtCorreoRW" MaxLength="25" GotFocus="txtCorreo_GotFocus"  materialDesign:HintAssist.Hint="{x:Static p:Resources.Correo}" TextWrapping="Wrap" Margin="115,124,0,0" HorizontalAlignment="Left" Width="260" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="WhiteSmoke" BorderThickness="0,0,0,2" Background="{x:Null}"/>
+        <TextBox x:Name="txtCorreo2" MaxLength="25" GotFocus="txtCorreo_GotFocus" LostFocus="txtCorreo_lostFocus"   materialDesign:HintAssist.Hint="{x:Static p:Resources.RepCorreo}" HorizontalAlignment="Left" TextWrapping="Wrap" Width="260" Margin="115,154,0,0" Height="25" VerticalAlignment="Top" BorderBrush="White" FontFamily="Showcard Gothic" Foreground="White" BorderThickness="0,0,0,2" Background="{x:Null}"/>
+        <PasswordBox x:Name="pswContrasenia" materialDesign:HintAssist.Hint="{x:Static p:Resources.Contrasenia}"
                      HorizontalAlignment="Left" Width="260" Margin="115,184,0,0" Height="26" VerticalAlignment="Top" 
                      BorderBrush="White" BorderThickness="0,0,0,2" Background="{x:Null}" Foreground="White" FontFamily="Showcard Gothic"
                      MaxLength="8" GotFocus="pswContrasenia_GotFocus" />
         <PasswordBox x:Name="pswContrasenia2" Margin="115,215,0,0" HorizontalAlignment="Left" Width="260" Height="25" 
                      VerticalAlignment="Top" BorderThickness="0,0,0,2" BorderBrush="White" Background="{x:Null}" 
-                     FontFamily="Showcard Gothic" Foreground="White" materialDesign:HintAssist.Hint="{x:Static p:Resources.pswContrasenia2}"
+                     FontFamily="Showcard Gothic" Foreground="White" materialDesign:HintAssist.Hint="{x:Static p:Resources.RepContrasenia}"
                      MaxLength="8" LostFocus="pswContrsenias_lostFocus"  />
 
         <Rectangle HorizontalAlignment="Right" Height="50" Margin="0,15,10,0" Stroke="Black" VerticalAlignment="Top" Width="474" StrokeStartLineCap="Round" StrokeLineJoin="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="3" RadiusX="15" RadiusY="15" OpacityMask="#FFAEAEAE" Fill="#7F303030"/>
-        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.txbTitulo}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="#BFFFFFFF" FontWeight="Bold"/>
-        <Button Name="btnRegistrarte" Content="{x:Static p:Resources.btnEndRegister}" HorizontalAlignment="Left" Margin="115,288,0,0" 
+        <TextBlock x:Name="txbTitulo" Text="{x:Static p:Resources.RegistroJugador}" HorizontalAlignment="Left" Height="30" Margin="115,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontFamily="Showcard Gothic" FontSize="25" Foreground="#BFFFFFFF" FontWeight="Bold"/>
+        <Button Name="btnRegistrarte" Content="{x:Static p:Resources.Registrarte}" HorizontalAlignment="Left" Margin="115,288,0,0" 
                 VerticalAlignment="Top" Width="260" Background="#FF8561C5" Click="btnRegistrarte_Click"  />
         <Button Name="btnRegresar" Click="btnRegresar_Click" MouseEnter="btnRegresar_MouseEnter" MouseLeave="btnRegresar_MouseLeave"
                 Style="{DynamicResource MahApps.Styles.Button.Circle}" Margin="16,20,433,287" Background="#FFF1DC00" BorderBrush="{x:Null}" Cursor="Hand">
@@ -52,6 +52,6 @@
             </StackPanel>
         </Button>
         <TextBlock Name="lblInfo" HorizontalAlignment="Left" Margin="116,245,0,0" TextWrapping="Wrap" Text="" Width="258" Height="38" FontFamily="Showcard Gothic" VerticalAlignment="Top" Background="#3FFFFFFF"/>
-        <Label Name="lblRegresar" Content="{x:Static p:Resources.lblRegresar}" Visibility="Hidden" HorizontalAlignment="Left" Margin="62,29,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+        <Label Name="lblRegresar" Content="{x:Static p:Resources.Atras}" Visibility="Hidden" HorizontalAlignment="Left" Margin="62,29,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
     </Grid>
 </Page>

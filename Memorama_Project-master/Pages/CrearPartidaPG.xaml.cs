@@ -1,5 +1,7 @@
 ﻿using Memorama.ChatService;
+using Memorama.DataAccessService;
 using Memorama.Model;
+using Memorama.PartidaService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,14 +22,32 @@ namespace Memorama.Pages {
     /// Lógica de interacción para CrearPartidaPG.xaml
     /// </summary>
     public partial class CrearPartidaPG : Page {
+        DataAccessServiceClient client = new DataAccessServiceClient();
+        PartidaServiceClient partidaService = new PartidaServiceClient();
         public CrearPartidaPG() {
             InitializeComponent();
-            tbBanEntrada.Text = JugadorSingleton.GetJugador().Username;
+           
         }
 
-       
+        private void btnAtras_Click(object sender, RoutedEventArgs e) {
+            this.NavigationService.Navigate(new InicioPG());
+            partidaService.EliminarPartida(JugadorSingleton.GetJugador().Username); //validar error de conexión
+        }
 
+        private void Salir( object sender ,ExitEventHandler e) {
+            partidaService.EliminarPartida(JugadorSingleton.GetJugador().Username);
+        }
 
+        private void btnComenzar_Click(object sender, RoutedEventArgs e) {
 
+        }
+
+        private void btnCrearPartida_Click(object sender, RoutedEventArgs e) {
+
+            partidaService.CrearPartida(JugadorSingleton.GetJugador().Username); //Validar error de conexión
+            lblJugadorUno.Content = JugadorSingleton.GetJugador().Username;
+            eJugadorUno.Fill = Brushes.DarkGreen;
+
+        }
     }
 }

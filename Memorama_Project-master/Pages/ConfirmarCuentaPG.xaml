@@ -15,9 +15,9 @@
 
     <Grid>
         <Rectangle Fill="#FF517EB0" HorizontalAlignment="Left" Height="55" Margin="70,80,0,0" VerticalAlignment="Top" Width="355" RadiusX="25" RadiusY="50"/>
-        <Label Content="Validar Cuenta" HorizontalAlignment="Left" Margin="165,90,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="20"/>
-        <TextBox Name = "txtCodigo" materialDesign:HintAssist.Hint="{x:Static p:Resources.txtCodigo}" HorizontalAlignment="Left" Height="35" Margin="120,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" FontSize="15" Foreground="White" BorderBrush="Black" BorderThickness="0,0,0,2"/>
-        <Button Name="btnConfirmar"  Content="{x:Static p:Resources.btnConfirmar}" Click="btnConfirmar_Click" HorizontalAlignment="Left" Margin="120,215,0,0" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" />
+        <Label Content="{x:Static p:Resources.ValidarCuenta}" HorizontalAlignment="Left" Margin="165,90,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="20"/>
+        <TextBox Name = "txtCodigo" materialDesign:HintAssist.Hint="{x:Static p:Resources.Codigo}" HorizontalAlignment="Left" Height="35" Margin="120,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" FontSize="15" Foreground="White" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+        <Button Name="btnConfirmar"  Content="{x:Static p:Resources.Confirmar}" Click="btnConfirmar_Click" HorizontalAlignment="Left" Margin="120,215,0,0" VerticalAlignment="Top" Width="245" FontFamily="Showcard Gothic" />
 
     </Grid>
 </Page>

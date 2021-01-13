@@ -32,7 +32,7 @@ namespace Memorama.Model {
                             "</br> <h2>No contestar este correo.</h2>";
 
             String mensaje =  "Error al enviar mensaje";
-            String from = "zS18012160@estudiantes.uv.mx";
+            String from = "memoramaregister@hotmail.com";
             String displayName = "Memorama";
 
             try {
@@ -45,7 +45,7 @@ namespace Memorama.Model {
                 mail.IsBodyHtml = true;
 
                 SmtpClient client = new SmtpClient("smtp.office365.com", 587);
-                client.Credentials = new NetworkCredential(from, "MoGa1999Rexy");
+                client.Credentials = new NetworkCredential(from, "verdeblancorojo99");
                 client.EnableSsl = true;
 
                 client.Send(mail);

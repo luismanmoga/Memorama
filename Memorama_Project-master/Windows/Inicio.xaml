@@ -7,11 +7,13 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Memorama.Windows"
         mc:Ignorable="d"
-        Title="Inicio" Height="450" Width="800"
+        Title="Inicio" Height="475" Width="800"
+        Closing="MetroWindow_Closing"
         WindowStartupLocation="CenterScreen"
     >
     <Grid>
-        <Frame Name="frameInicio" Content="Frame" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" NavigationUIVisibility="Hidden"/>
+        <Frame Name="frameInicio" Content="Frame" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" NavigationUIVisibility="Hidden" Margin="0,0,0,-6"/>
+        <MediaElement Name="meMusicaFondo" LoadedBehavior="Manual" HorizontalAlignment="Left" Height="100" Margin="335,165,0,0" VerticalAlignment="Top" Width="100" Source="../Resources/song.wav" Balance="5" Volume="10"/>
 
 
     </Grid>

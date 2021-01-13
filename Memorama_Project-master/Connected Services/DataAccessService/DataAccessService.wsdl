@@ -60,6 +60,12 @@
   <wsdl:message name="IDataAccessService_Existe_OutputMessage">
     <wsdl:part name="parameters" element="tns:ExisteResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataAccessService_CambiarContrasenia_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenia" />
+  </wsdl:message>
+  <wsdl:message name="IDataAccessService_CambiarContrasenia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContraseniaResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataAccessService">
     <wsdl:operation name="RegistrarJugador">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/RegistrarJugador" message="tns:IDataAccessService_RegistrarJugador_InputMessage" />
@@ -76,6 +82,10 @@
     <wsdl:operation name="Existe">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/Existe" message="tns:IDataAccessService_Existe_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/ExisteResponse" message="tns:IDataAccessService_Existe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataAccessService/CambiarContrasenia" message="tns:IDataAccessService_CambiarContrasenia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataAccessService/CambiarContraseniaResponse" message="tns:IDataAccessService_CambiarContrasenia_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IDataAccessService" type="tns:IDataAccessService">
@@ -110,6 +120,15 @@
     </wsdl:operation>
     <wsdl:operation name="Existe">
       <soap12:operation soapAction="http://tempuri.org/IDataAccessService/Existe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <soap12:operation soapAction="http://tempuri.org/IDataAccessService/CambiarContrasenia" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

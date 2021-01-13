@@ -23,7 +23,7 @@ namespace Memorama.Pages {
     public partial class InicioPG : Page {
         public InicioPG() {
             InitializeComponent();
-            lblBienvenida.Content = Memorama.Languages.Resources.MensajeBienvenida + " " + JugadorSingleton.GetJugador().Username;
+            lblBienvenida.Content = Memorama.Languages.Resources.MensajeBienvenida + " " + JugadorSingleton.GetJugador().Username;  //Posible excepcion
         }
 
         private void btnCrearPartida_Click(object sender, RoutedEventArgs e) {
@@ -32,6 +32,18 @@ namespace Memorama.Pages {
 
         private void btnSalir_Click(object sender, RoutedEventArgs e) {
             Window.GetWindow(this).Close();
+        }
+
+        private void btnPuntuacion_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void btnUnirPartida_Click(object sender, RoutedEventArgs e) {
+            this.NavigationService.Navigate(new UnirsePartidaPG());
+        }
+
+        private void btnConfiguracion_Click(object sender, RoutedEventArgs e) {
+            this.NavigationService.Navigate(new ConfiguracionPG());
         }
     }
 }

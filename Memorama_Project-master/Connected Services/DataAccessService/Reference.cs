@@ -23,6 +23,9 @@ namespace Memorama.DataAccessService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContraseniaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CorreoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -38,6 +41,19 @@ namespace Memorama.DataAccessService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Contrasenia {
+            get {
+                return this.ContraseniaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContraseniaField, value) != true)) {
+                    this.ContraseniaField = value;
+                    this.RaisePropertyChanged("Contrasenia");
+                }
             }
         }
         
@@ -117,6 +133,12 @@ namespace Memorama.DataAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/Existe", ReplyAction="http://tempuri.org/IDataAccessService/ExisteResponse")]
         System.Threading.Tasks.Task<bool> ExisteAsync(string username, string correo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/CambiarContrasenia", ReplyAction="http://tempuri.org/IDataAccessService/CambiarContraseniaResponse")]
+        bool CambiarContrasenia(string correo, string nuevaContrasenia);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/CambiarContrasenia", ReplyAction="http://tempuri.org/IDataAccessService/CambiarContraseniaResponse")]
+        System.Threading.Tasks.Task<bool> CambiarContraseniaAsync(string correo, string nuevaContrasenia);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -176,6 +198,14 @@ namespace Memorama.DataAccessService {
         
         public System.Threading.Tasks.Task<bool> ExisteAsync(string username, string correo) {
             return base.Channel.ExisteAsync(username, correo);
+        }
+        
+        public bool CambiarContrasenia(string correo, string nuevaContrasenia) {
+            return base.Channel.CambiarContrasenia(correo, nuevaContrasenia);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CambiarContraseniaAsync(string correo, string nuevaContrasenia) {
+            return base.Channel.CambiarContraseniaAsync(correo, nuevaContrasenia);
         }
     }
 }

@@ -16,9 +16,9 @@
         </Grid.Background>
         <Button Name="btnCrearPartida" Content="Crear Partida" HorizontalAlignment="Left" Margin="105,140,0,0" VerticalAlignment="Top" Width="230" FontFamily="Showcard Gothic" Background="#FF009E2C" Height="70
                 " BorderBrush="{x:Null}" FontSize="16" Click="btnCrearPartida_Click"/>
-        <Button Content="Tabla de Puntuaciones" HorizontalAlignment="Left" Margin="105,238,0,0" VerticalAlignment="Top" Width="230" Background="#FFA47CBE" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
-        <Button Content="Unirse a Partida" HorizontalAlignment="Left" Margin="440,140,0,0" VerticalAlignment="Top" Width="230" Background="#FFFF9900" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
-        <Button Content="Configuración" HorizontalAlignment="Left" Margin="440,238,0,0" VerticalAlignment="Top" Width="230" Background="#FF1E78F1" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
+        <Button Name="btnPuntuacion" Click="btnPuntuacion_Click" Content="Tabla de Puntuaciones" HorizontalAlignment="Left" Margin="105,238,0,0" VerticalAlignment="Top" Width="230" Background="#FFA47CBE" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
+        <Button Name="btnUnirPartida" Click="btnUnirPartida_Click" Content="Unirse a Partida" HorizontalAlignment="Left" Margin="440,140,0,0" VerticalAlignment="Top" Width="230" Background="#FFFF9900" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
+        <Button Name="btnConfiguracion" Click="btnConfiguracion_Click"  Content="Configuración" HorizontalAlignment="Left" Margin="440,238,0,0" VerticalAlignment="Top" Width="230" Background="#FF1E78F1" Height="70" FontFamily="Showcard Gothic" BorderBrush="{x:Null}" FontSize="16"/>
         <Button Name = "btnSalir" Click="btnSalir_Click"  Content="Salir" HorizontalAlignment="Left" Margin="270,335,0,0" VerticalAlignment="Top" Width="230" Background="Red" FontFamily="Showcard Gothic" Height="45" BorderBrush="{x:Null}" FontSize="16"/>
         <Rectangle Fill="#FF517EB0" HorizontalAlignment="Left" Height="50" Margin="245,35,0,0" VerticalAlignment="Top" Width="300" StrokeStartLineCap="Round" StrokeEndLineCap="Round" RadiusX="10" RadiusY="10"/>
         <Label Content="INICIO" HorizontalAlignment="Left" Margin="350,40,0,0" VerticalAlignment="Top" Height="40" Width="90" Foreground="Black" FontFamily="Showcard Gothic" FontSize="25"/>
